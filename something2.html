@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<style>
+    h1 {
+        text-align: center;
+        background: rgb(235, 18, 137);
+    }
+    p {
+        text-align: center;
+        background: rgb(23, 209, 233);
+    }
+    html {
+        background-color: rgb(208, 225, 233);
+    }
+</style>
+<html>
+    <main id="main">
+        <h1 id="title">Survey Says...</h1>
+        <p id="description">This is a survey about how many times you take your dog a walk and have to pick up their <strong>poop</strong></p>
+        <form id="survey-form">
+          <label id="name-label">Name</label>
+            <input id="name" type="text" placeholder="Name" required>
+          <label id="email-label">Email</label>
+          <input id="email" type="email" placeholder="Email" required>
+          <label id="number-label">Number of Poops</label>
+          <input id="number" type="number" placeholder="💩" min="0" max="500" required>
+          <select  name="Feelings" id="dropdown">
+            <option value="Happy">Happy</option>
+            <option value="Sad">Sad</option>
+            <option value="Mad">Mad</option>
+            <option value="Confused">Confused</option>
+            <option value="Bloated">Bloated</option>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="checkbox" name="Medical History" value="Healthy">Healthy
+            <input type="checkbox" name="Medical History" value="STD">STD
+            <input type="checkbox" name="Medical History" value="Other Disease">Other Disease
+            <input type="checkbox" name="Medical History" value="Self-Diagnosing Syndrome">Self-Diagnosing Syndrome
+            <textarea placeholder="Comments/Feedback"></textarea>
+            <input id="submit" type="submit">Submit
+        </form>
+    </main>
+</html>

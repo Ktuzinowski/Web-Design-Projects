@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<style>
+    html {
+        background: rgb(49, 43, 43);
+    }
+    h1 {
+        color: white;
+        font-size: 80px;
+    }
+    .vertical-menu {
+        position: fixed;
+        font-size: 10px;
+        top: 0px;
+        left: 0px;
+}
+
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+.project-tile {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+#welcome-section {
+    height: 670px;
+    text-align: center;
+}
+#project {
+    height: 670px;
+}
+img {
+        width: 270px;
+        height: 230px;
+    }
+    @media (max-width: 350px) {
+        #chaos {
+            width:50%
+        }
+    }
+    input {
+        font-size: 50px;
+    }
+    textarea {
+        font-size: 50px;
+    }
+</style>
+<html>
+    <nav class="vertical-menu" id="navbar"> 
+        <header> <strong>Projects</strong></header>
+        <a href="#Tribute_Page">Tribute Page</a>
+        <a href="#Survey">Survey</a>
+        <a href="#Product">Product Landing Page</a>
+        <a href="#Documentation">Documentation Page</a>
+        <a href="#github">Github</a>
+        <a href="#linkedin">Linkedin</a>
+    </nav>
+    <section id="welcome-section">
+        <h1>Hi, I'm Kevin Tuzinowski, web dev in training</h1>
+        <h1>Below are some of my projects thus far, feel free to take a look</h1>
+    </section>
+    <section id="projects">
+        <div class="project-tile">
+            <div id=Tribute_Page class="d1">
+                <a href="https://codepen.io/ktuzinowski/pen/KKNJPJG">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Nelson_Mandela-2008_%28edit%29.jpg" alt="Tribute Page of Nelson Mandela">
+                    <figcaption>Mandela Tribute</figcaption>
+                    </a>
+            </div>
+            <div id="Survey" class="d2">
+                <a href="https://codepen.io/ktuzinowski/pen/PobVmdj">
+                    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F20%2F2018%2F10%2Fdog-poop.jpg" alt="Tribute Page of Nelson Mandela">
+                    <figcaption>Survey on Poop</figcaption>
+                    </a>
+            </div>
+            <div id="Product">
+                <a href="https://codepen.io/ktuzinowski/pen/GRNzvRw">
+                    <img src="https://www.tasteofthewildpetfood.com/wp-content/uploads/2017/05/Bee-Stings-Refresh.jpg" alt="Dog with a Bee, 'BEE VIGILANT ABOUT STINGS title'">
+                    <figcaption>Bee Sting Cream</figcaption>
+                </a>
+            </div>
+            <div id="Documentation">
+                <a href="https://codepen.io/ktuzinowski/pen/VwmORyY">
+                    <img src="https://matplotlib.org/stable/_static/logo2_compressed.svg" alt="Matplotlib Logo">
+                    <figcaption>Documentation</figcaption>
+                </a>
+            </div>
+            <div id="github">
+                <a href="https://github.com/Ktuzinowski/">
+                    <img src="https://cdn2-sr-application.sportsrecruits.com/images/soccerrecruits/2021/2/5338551e20818f43e1e67a140f14ad97.jpeg" alt="Picture of Kevin">
+                    <figcaption>Github Profile</figcaption>
+                </a>
+            </div>
+            <div id="linkedin">
+                <a href="https://www.linkedin.com/in/kevin-tuzinowski-76826a1b3/">
+                    <img src="https://brand.linkedin.com/etc.clientlibs/settings/wcm/designs/gandalf/clientlibs/resources/images/og-social-share-image.jpg" alt="Picture of Linkedin Logo">
+                    <figcaption>Linkedin Profile</figcaption>
+                </a>
+            </div>
+            <div id="chaos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Einstein_1921_by_F_Schmutzer_-_restoration.jpg/1200px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg" Filter: Wave(Add="0", Freq="5", LightStrength="20", Phase="220", Strength="10")>
+            </div>
+            <img src="https://www.history.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYzNzc3OTA0MzAyMzY4NTkz/da_vinci_promo.jpg" Filter: Wave(Add="0", Freq="5", LightStrength="20", Phase="220", Strength="10")>
+            <img src="https://res.cloudinary.com/teepublic/image/private/s--Dwb010bZ--/t_Resized%20Artwork/c_fit,g_north_west,h_1054,w_1054/co_ffffff,e_outline:53/co_ffffff,e_outline:inner_fill:53/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_auto,h_630,q_90,w_630/v1550196849/production/designs/4204312_0.jpg" alt="bongocat">
+               </div>
+            </div>
+    </section>

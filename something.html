@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<style>
+    main {
+        
+    }
+    html {
+        background-color: rgb(178, 220, 240);
+    }
+    .thick_border {
+        border-color:rgb(30, 33, 197);
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 45%;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #title {
+        background: rgb(94, 30, 197);
+        font-size: 46px;
+        text-align: center;
+    }
+    #img-div {
+        background: rgb(22, 146, 168);
+        text-align: center;
+    }
+    #image {
+        position: relative;
+        max-width: 95%;
+        height: auto;
+    }
+    #image-caption {
+        font-size: 25px;
+        font-weight: 10px;
+        text-align: center;
+    }
+    .mini_black_border {
+        border-color: black;
+        border-width: 1.5px;
+        border-style: solid;
+        border-collapse: collapse;
+    }
+    #tribute-info {
+        font-size: 27px;
+        font-weight: 2px;
+    }
+    #tribute-link {
+        font-size: 20px;
+    }
+    img.resize {
+        width:400px;
+        height:400px;
+    }
+</style>
+<html>
+    <main id="main">
+    <h1 id="title">Nelson Mandela</h1>
+    <div id="img-div">
+        <img class="thick_border center resize" id="image" src="data:image/jpeg;base64,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" alt="Nelson Mandela">
+        <p id="img-caption"><strong>Nelson Mandela</strong> in his later years, spreading peace</p>
+    </div>
+    <p id="tribute-info"> This tribute page was to honor the highly revered <strong>Nelson Mandela</strong>. Both a voice and symbol for change,
+        the ending of discrimination, hatred, and animosity between two groups. Much can be learned on how to be tolerant of others,
+        as Mandela sought to heal wounds instead of opening up new ones after the originally white dominated South African government
+        and social structure was dismantled. He promoted Rugby amongst the black communities, spreading both pride and joy of a sport
+        once only played by almost exclusively whites. Ending tensions between two groups once at war, and finding a path to move forward
+        and progress. South Africa is now one of the worlds most prosperous economies, being a key geographical area for trade throughout
+        the world. One can only wonder how Mandela would have continued to end rascism and promote the equality of all races and people. 
+        His story will live on forever.
+    </p>
+    <a id="tribute-link" target="_blank" href="https://en.wikipedia.org/wiki/Nelson_Mandela">More on Nelson Mandela</a>
+    </main>
+</html>

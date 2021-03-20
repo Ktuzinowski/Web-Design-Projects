@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+       body {
+      padding: 1%;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   }
+   * {
+      box-sizing: border-box;
+   }
+   .left, .right, .center {
+      float: left;
+      width: 33%;
+      color: white;
+      height: 200px;
+      text-align: center;
+   }
+   section header {
+       display: flex;
+   }
+   .left {
+       display: flex;
+   }
+   .right {
+       display: flex;
+   }
+   .center {
+       display: flex;
+   }
+   .container:after {
+      clear: both;
+   }
+    html {
+        background-color: white;
+    }
+    #main-doc {
+        font-size: 12px;
+        }
+    .column {
+        float: left;
+        width: 30%;
+    }
+    #figure-boxes {
+        color: rgb(149, 17, 161);
+    }
+    div {
+        display: flex;
+        justify-content: center;
+        border-width: 5px;
+        border-color: black;
+    }
+    #Scattering header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        text-align: center; 
+        font-size: 16px;
+    }
+    #Examples header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        text-align: center; 
+        font-size: 16px;
+    }
+    #Examples2 header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        text-align: center; 
+        font-size: 16px;
+    }
+
+    #Plotting_in_2D_or_3D header {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        text-align: center; 
+        font-size: 16px;
+    }
+    img {
+        width: 170px;
+        height: 130px;
+    }
+    .main-section {
+        color: black;
+        font-size: 12px;
+    }
+    h1 {
+        color: black;
+        font-size: 30px;
+    }
+    @media (max-width: 350px) {
+        textarea {
+            width:49%
+        }
+    }
+    .vertical-menu {
+        position: fixed;
+        font-size: 10px;
+        top: 0px;
+        left: 0px;
+}
+
+.vertical-menu a {
+  background-color: #eee; /* Grey background color */
+  color: black; /* Black text color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc; /* Dark grey background on mouse-over */
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50; /* Add a green color to the "active/current" link */
+  color: white;
+}
+</style>
+<html>
+    <main id="main-doc">
+        <nav class="vertical-menu" id="navbar"> 
+            <header> <strong>Matplotlib</strong></header>
+            <a class="main-section" href="#Getting_started">Start</a>
+            <a class="main-section" href="#Note">Note</a>
+            <a class="main-section" href="#Line_plots">Line Plots</a>
+            <a class="main-section" href="#Scatter_plots">Scatter Plots</a>
+            <a class="main-section" href="#Notes">Notes</a>
+            <a class="main-section" href="#Scattering">Scattering</a>
+            <a class="main-section" href="#Plotting_in_2D_or_3D">2D/3D Plotting</a>
+            <a class="main-section" href="#Examples">Examples</a>
+            <a class="main-section" href="#Examples2">Examples2</a>
+        </nav>
+        <h1>Documentation of Matplotlib 3D Plots (mplot3d)</h1>
+        <section class="main-section" id="Getting_started"> 
+            <header><strong>Gettting started</strong></header>
+            <p> An Axes 3D object is created just like any other axes using the projection='3d' keyword. Create a new <span style="color: #ff0000">matplotlib.figure.Figure</span> and add
+            <br> add a new axes to it of type Axes3D:</p>
+            <figure id="box">
+                <p id="figure-boxes"> <code>import matplotlib.pypot as plt</code> <br><br> <code></code>from mpl_toolkits.mplot3d import Axes3D </code></br> <br> <code>fig=plt.figure()</code> </br>
+                    <code> ax = fig.add_subplot(111, projection='3d') </code>
+                </p>
+        <p> <i>New in version 1.0.0:</i> This approach is the preferred method of creating a 3D axes.</p>
+            </section>
+<section class="main-section" id="Note">
+            <header> <strong>Note</strong> </header>
+            <p>Prior to version 1.0.0, the method of creating a 3D axes was different. For those using older versions of matplotlib, changing ax=
+                <br> <code>fig.add_subplot(111, projections='3d') to ax=Axes3D(fig).</code>
+            </p>
+</section>
+<section class="main-section" id="Line_plots">
+            <header><strong>Line plots</strong></header>
+            <p>Axes3D.plot(xs,ys,#args,**kwargs) <br> <br><strong>Plot 2D or 3D data</strong></br> <p class="column"> <strong>Argument</strong> <br> <i>xs, ys</i> </br> 
+                <br> <i>zs</i> </br> <br> <i>zdir</i></br></p> <p class="column"> <strong>Description</strong> <br>x, y coordinates of vertices</br>
+                <br> z value(s), either one for all points or one for each point</br> <br> Which direction to use as z ('x','y' or 'z') when
+                plotting a 2D set.</p>
+
+            <footer>Other arugments to pass on to plot() <a href="https://matplotlib.org/stable/gallery/mplot3d/lines3d.html">Plot Demo</a></footer>
+            <img src="https://matplotlib.org/3.1.0/_images/sphx_glr_lines3d_001.png" alt="Parametric Curve">
+</section>
+<section class="main-section" id="Scatter_plots">
+            <header><strong>Scatter plots</strong></header>
+            <code> Axes3D.scatter(<i>self,xs,xs,ys,zs=0,zdir='z',s=20,c=None,depthshade=True,*args,**kwargs</i>)</code>
+            <p> Create a scatter plot.</p>
+            <p class="column"> <strong>Paramaters:</strong><br><strong>Returns:</strong><br><strong>Other Parameters:</strong></p>
+            <p class="column"> <strong>xs, ys</strong> : array-like <br> The data positions. </br> <br> <strong>zs</strong> : float or array-like, default: 0 </br>
+            <br> The z-positions. Either an array of the same length as <i>xs</i> and <i>ys</i> or a snigle value to place all points in the same plane. 
+            <br> <strong>zdir</strong> : {'x', 'y', 'z', '-x', '-y', '-z'}, default 'z' </br> <br> The axis direction for the zs. This is useful when plotting
+            2D data on a 3D Axes. The data must be passed as </br> <br> <i>xs</i>, <i>ys</i>. Setting <i>zdir</i> to 'y' then plots the data to the x-z plane. </br>
+            <br> See also <a href="https://matplotlib.org/stable/gallery/mplot3d/2dcollections3d.html">Plot 2D data on 3D plot.</a> </br>
+            <br> <strong>s</strong> : float or array - like, default: 20 </br> <br> The marker size in points**2. Either an array of the same length as <i>xs</i> and <i>ys</i> or a single value to make all 
+            </br> <br> markers the same size. </br> <br> <strong>c</strong> : color, sequence, or sequence of colors, optional </br>
+            <br> The marker color. Possible values: </br>
+            <li>A single color format string</li>
+            <li>A sequence of colors of length n</li>
+            <li>A sequence of n numbers to be mapped to colors using <i>cmap</i> and <i>norm</i></li> 
+            <li><i>A 2-D array in which the rows are RGB or RGBA</i></li>
+            <li>This concludes the possible values for the marker color</li>
+            <br>For more details see the <i>c</i> argument of <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.scatter.html#matplotlib.axes.Axes.scatter">Scatter</a></br>
+            <br> For non-filled markers, the <i>edgecolors</i> kwarg is ignored and forced to 'face' internally. </br>
+            <br> <strong>plotnofinite</strong>: bool, default: False </br> <br> Set to plot points with nonfinite <i>c</i>, in conjunction with <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html#matplotlib.colors.Colormap.set_bad">set_bad.</a> </br>
+            <br> <strong>Returns:</strong> <a href="https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.PathCollection">PathCollection</a> </br>
+            <br> <strong>Other Parameters</strong>: <strong>**kwargs:</strong> <a href="https://matplotlib.org/stable/api/collections_api.html#matplotlib.collections.Collection">Collection</a> properties </br>
+            </p>
+</section>
+<section class="main-section" id="Notes">
+    <header><strong>Notes</strong></header>
+    <p>
+        In addition to the above described arguments, this function can take <i>data</i> keyword argument. If such a <i>data</i> argument is given, the
+        <br> following arguments can also be string <i>s</i>, whici is interpreted as <i>data[s]</i> (unless this raises an exception): <i>x,y,s,linewidths</i> </br>
+        <i>edgecolors, c, facecolor, facecolors, color.</i> Objects passed as <strong>data</strong> must support iterm access (<i>data[s]</i>) and membership test (<i>s</i> in data).
+    </p>
+</section>
+<section class="main-section" id="Scattering">
+    <header><strong>Scattering</strong></header>
+    <div class="left">
+        <a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/scatter_hist.html#sphx-glr-gallery-lines-bars-and-markers-scatter-hist-py">
+        <img src="https://matplotlib.org/3.1.0/_images/sphx_glr_scatter_hist_001.png" alt="Scatterplot with Historgram">
+        <figcaption>Scatterplot with Histogram</figcaption>
+        </a>
+    </div>
+    <div class="right">
+        <a href="https://matplotlib.org/stable/gallery/misc/zorder_demo.html#sphx-glr-gallery-misc-zorder-demo-py">
+        <img src="https://matplotlib.org/3.3.2/_images/sphx_glr_zorder_demo_001.png" alt="Zorder Demo">
+        <figcaption>Zorder Demo</figcaption>
+        </a>
+    </div>
+    <div class="center">
+        <a href="https://matplotlib.org/stable/gallery/images_contours_and_fields/quiver_demo.html#sphx-glr-gallery-images-contours-and-fields-quiver-demo-py">
+        <img src="https://matplotlib.org/stable/_images/sphx_glr_quiver_demo_003.png" alt="Advanced quiver and quiverkey">
+        <figcaption>Advanced quiver and quiverkey</figcaption>
+        </a>
+    </div>
+</section>
+<section class="main-section" id="Plotting_in_2D_or_3D">
+    <header>
+        <strong>Plotting in 2D or 3D</strong>
+    </header>
+    <div class="left">
+        <a href="https://matplotlib.org/stable/gallery/mplot3d/scatter3d.html#sphx-glr-gallery-mplot3d-scatter3d-py">
+        <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_scatter3d_001.png" alt="3d scatterplot matplotlib">
+        <figcaption>3D Scatterplot</figcaption>
+        </a>
+    </div>
+    <div class="right">
+        <a href="https://matplotlib.org/stable/gallery/pie_and_polar_charts/polar_scatter.html#sphx-glr-gallery-pie-and-polar-charts-polar-scatter-py">
+        <img src="https://matplotlib.org/stable/_images/sphx_glr_polar_scatter_001.png" alt="Scatter Plot Polar Axis Matplotlib">
+        <figcaption>Scatter Plot Polar Axis</figcaption>
+        </a>
+    </div>
+    <div class="center">
+        <a href="https://matplotlib.org/stable/gallery/mplot3d/2dcollections3d.html#sphx-glr-gallery-mplot3d-2dcollections3d-py">
+            <img src="https://user-images.githubusercontent.com/14196488/28123680-dfb2709a-6721-11e7-8b40-f7e960fb8fca.png" alt="2d slices in 3d plot">
+            <figcaption>2D Slices in 3D Plot</figcaption>
+        </a>
+    </div>
+</section>
+<section class="main-section" id="Examples">
+    <header><strong>Examples</strong></header>
+    <div class="left">
+        <a href="https://matplotlib.org/stable/tutorials/colors/colormapnorms.html#sphx-glr-tutorials-colors-colormapnorms-py">
+        <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_colormapnorms_006.png" alt="colormap of something">
+        <figcaption>Colormap Normalization</figcaption>
+        </a>
+    </div>
+    <div class="right">
+        <a href="https://matplotlib.org/stable/gallery/widgets/polygon_selector_demo.html#sphx-glr-gallery-widgets-polygon-selector-demo-py">
+        <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_polygon_selector_demo_001.png" alt="polygon selector demo">
+        <figcaption>Polygon Selector Demo</figcaption>
+        </a>
+    </div>
+    <div class="center">
+        <a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html#sphx-glr-tutorials-colors-colormaps-py">
+            <img src="https://matplotlib.org/3.1.0/_images/sphx_glr_colormaps_002.png" alt="colormaps in matplotlib">
+            <figcaption>Choosing Colormaps in Matplotlib</figcaption>
+        </a>
+    </div>
+</section>
+<section class="main-section" id="Examples2">
+    <header><strong>Examples2</strong></header>
+    <div class="left">
+        <a href="https://matplotlib.org/stable/tutorials/introductory/images.html#sphx-glr-tutorials-introductory-images-py">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReYT0O6PVvT1Y01SKQqHBhHHKuLvmwkVlVog&usqp=CAU" alt="Image of a beetle, black, red, and white">
+        <figcaption>Image Tutorial</figcaption>
+        </a>
+    </div>
+    <div class="right">
+        <a href="https://matplotlib.org/stable/tutorials/intermediate/constrainedlayout_guide.html#sphx-glr-tutorials-intermediate-constrainedlayout-guide-py">
+        <img src="https://matplotlib.org/3.1.1/_images/sphx_glr_constrainedlayout_guide_010.png" alt="Constrained Layout Guide">
+        <figcaption>Constrained Layout Guide</figcaption>
+        </a>
+    </div>
+    <div class="center">
+        <a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py">
+            <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2020/02/matplot.png" alt="pyplot">
+            <figcaption>Pyplot Tutorial</figcaption>
+        </a>
+    </div>
+</section>
+    </main>
+<textarea placeholder="Comments/Feedback"></textarea>
+<input id="submit" type="submit">
+</html>

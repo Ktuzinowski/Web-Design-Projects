@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<style>
+    html {
+      background: rgb(208, 225, 233);
+    }
+    header {
+      font-size: 56px;
+      text-align: center;
+    }
+    #header-img {
+      width: 100px;
+      height: 70px;
+    } 
+    .thick_border {
+      border-color:black;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 25%;
+    }
+    .nav-link {
+      border-color: black;
+      border-width: 2px;
+      border-style: solid;
+      border-radius: 15%
+    }
+    iframe {
+     margin: auto;
+     position: relative;
+     display: flex;
+    }
+    nav {
+        position: fixed;
+        font-size: 20px;
+        top: 0px;
+        left: 0px;
+    }
+    .thick_border {
+        border-color:rgb(30, 33, 197);
+        border-width: 10px;
+        border-style: solid;
+        border-radius: 45%;
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    img.resize {
+        width:400px;
+        height:400px;
+    }
+    #ointments {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center; 
+    }
+    #locations {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;  
+    }
+    #ingredients {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;  
+    }
+    #sponsors {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+    }
+    #image-caption {
+        font-size: 25px;
+        font-weight: 10px;
+        text-align: center;
+    }
+    textarea {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;
+    }
+    @media (max-width: 350px) {
+        textarea {
+            width:49%
+        }
+    }
+</style>
+<html>
+<header id="header" style="color:orange">Bee Sting Cream <img class="thick_border" id="header-img" src="https://metro.co.uk/wp-content/uploads/2017/11/pri_60974474.jpg?quality=90&strip=all&zoom=1&resize=644%2C429"> 
+<nav id="nav-bar">
+  <a class="nav-link" href="#ointments">Ointments</a> |
+  <a class="nav-link" href="#locations">Locations</a> |
+  <a class="nav-link" href="#ingredients">Ingredients</a> |
+  <a class="nav-link" href="#sponsors">Sponsors</a>
+</nav></header>
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/OQk23H42dxo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <form action="https://www.freecodecamp.com/email-submit" id="form"> 
+            <input name="email" id="email" type="email" placeholder="Email" required>
+            <input name="email" id="submit" href ="https://www.freecodecamp.com/email-submit" type="submit">
+    </form>
+<div id="ointments">
+    <img class="thick_border center resize" src="https://vcahospitals.com/-/media/vca/images/lifelearn-images-foldered/789/eye_drop_dog.png?la=en&hash=67CC37721C7DD5573C27B389E04ADDEA" alt="Nelson Mandela">
+        <p id="img-caption"><strong>Ointments</strong> for dogs, always a good thing, trusted from our team of experts</p>  
+</div>
+<div2 id="locations">
+    <img class="thick_border center resize" src="http://www.nasa.gov/sites/default/files/thumbnails/image/1c-pia24028-europa-glow-illustration-final-1041.jpg" alt="Europa Moon">
+        <p id="img-caption"><strong>Locations</strong> where the oinments are taken for the dogs, thanks to Elon Musk</p>
+</div2>
+<div3 id="ingredients">
+    <img class="thick_border center resize" src="https://i.pinimg.com/originals/52/5e/d8/525ed831f9c5376e4ee180daa79d7f4f.jpg" alt="Space Plants">
+        <p id="img-caption"><strong>Ingredients</strong> for the anti-aging cream for bee stings on dogs</p>
+</div3>
+<div4 id="sponsors">
+    <img class="thick_border center resize" src="https://images.theconversation.com/files/204523/original/file-20180202-123846-1xqjy6u.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" alt="Sponsorships, Elon Musk's Telsa and SpaceX">
+        <p id="img-caption"><strong>Sponsors</strong> are SpaceX and Tesla to develope this startling technology</p>
+</div4>
+<textarea placeholder="Comments/Feedback"></textarea>
+</html>
