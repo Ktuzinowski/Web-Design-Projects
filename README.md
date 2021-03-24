@@ -1,2 +1,2 @@
 # Web-Design-Projects
-Github projects on display to display knowledge of HTML and CSS
+Github projects to display knowledge of HTML and CSS
